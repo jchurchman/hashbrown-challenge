@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import AppHeader from './components/AppHeader'
+import SearchBar from './components/SearchBar'
 
 const AppContainer = styled.div`
   display: flex;
@@ -9,15 +10,14 @@ const AppContainer = styled.div`
   left: 0;
   right: 0;
   padding: 2em;
+  background-color: light-gray;
 `
 
 function App() {
   return (
     <AppContainer>
       <AppHeader />
-      <div>
-        This is the AppHeader component
-      </div>
+      <SearchBar />
     </ AppContainer>
   );
 }
