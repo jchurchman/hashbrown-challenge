@@ -49,7 +49,7 @@ function App() {
         {searchTerm}
       </SearchTerm>
       {
-        !!results.length && (
+        searchTerm && results.length && (
           <TweetList>
             {
               results.map(({ id, text }) => (
