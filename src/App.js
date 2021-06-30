@@ -23,7 +23,7 @@ const SearchTerm = styled.div`
   margin-top: 1em;
   margin-bottom: 1em;
   font-weight: bold;
-  min-height: 1em;
+  min-height: 1.25em;
 `
 
 const TweetList = styled.div`
