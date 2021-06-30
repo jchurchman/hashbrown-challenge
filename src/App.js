@@ -1,7 +1,8 @@
-import { useState } from 'react'
 import styled from 'styled-components'
+import useAppHook from './App.hook'
 import AppHeader from './components/AppHeader'
 import SearchBar from './components/SearchBar'
+import TweetBox from './components/TweetBox'
 
 const AppContainer = styled.div`
   display: flex;
@@ -13,21 +14,33 @@ const AppContainer = styled.div`
   left: 0;
   right: 0;
   padding: 2em;
-  background-color: light-gray;
+  overflow: hidden;
+  background-color: #ECEBEB;
 `
 
 const SearchTerm = styled.div`
-  font-size: 2em;
+  font-size: 1.25em;
   margin-top: 1em;
+  margin-bottom: 1em;
   font-weight: bold;
+  min-height: 1em;
+`
+
+const TweetList = styled.div`
+  height: calc(100vh - 24em);
+  overflow: scroll;
+  ${TweetBox}:first-child {
+    margin-top: 0;
+  }
 `
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState('')
+  const {
+    searchTerm,
+    handleFormSubmit,
+    results,
+  } = useAppHook()
 
-  const handleFormSubmit = (term) => {
-    setSearchTerm(`#${term}`)
-  }
   return (
     <AppContainer>
       <AppHeader />
@@ -35,6 +48,17 @@ function App() {
       <SearchTerm>
         {searchTerm}
       </SearchTerm>
+      {
+        !!results.length && (
+          <TweetList>
+            {
+              results.map(({ id, text }) => (
+                <TweetBox key={id} text={text} />
+              ))
+            }
+          </TweetList>
+        )
+      }
     </ AppContainer>
   );
 }

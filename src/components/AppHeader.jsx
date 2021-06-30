@@ -8,6 +8,7 @@ const Header = styled.div`
   right: 0;
   display: flex;
   justify-content: center;
+  background-color: #ECEBEB;
 `
 
 const HeaderBar = styled.header`
