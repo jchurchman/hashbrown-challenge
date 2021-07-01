@@ -2,22 +2,9 @@
 
 This application was bootstrapped with create-react-app. The boilerplate README content for that library can be found below.
 
-You're looking at the code for this project in the `main` branch. This is the more... rough version of code that includes some hopefully insightful efforts to integrate the Twitter API.
+You're looking at the code for this project in the `main` branch. The big difference with this version is that it has _very_ simple unit tests for the display components.
 
-In order to see the UI only version of this application with only mocked data, checkout the branch `mocked` then follow the README instructions there.
-
-As for the direction this application was _supposed_ to go:
- - With a Twitter Developer Account, an API Secret and API Key have been aquired and kept in a .env.localfile as environment variables that the React application has access to.
- - On Mount, the application should hit the Twitter API to create a Bearer token for application authorization (public information only)
- - That Bearer token is captured in a scoped variable so it is not easily accessible by bad actors.
- - The Bearer token is used as an Authorization header for making queries to the Twitter API to search by hashtag
- - On Unmount, the Bearer token is invalidated.
-
-The above flow is described in the [Twitter Application-only authentication and OAuth 2.0 Bearer Token Docs](https://developer.twitter.com/en/docs/authentication/oauth-2-0/application-only)
-
-The problem that I am having is that all of my requests to the Twitter API from the client are blocked due to CORS.
-
-A path to (hopefully) solve this issue that I plan to undertake is to create a Node.js server (with Express.js to handle the routes), host this React application on that server, then make fetches to the Twitter API from the server. The React application would hit the server then the server would hit Twitter.
+To see those in action, simple run `npm test` or `yarn test` in the same directory where this repo has been cloned.
 
 # Boiler plate below
 
