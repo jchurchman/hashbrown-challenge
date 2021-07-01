@@ -6,13 +6,14 @@ import TweetBox from './components/TweetBox'
 
 const AppContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: absolute;
   flex-direction: column;
   top: 13em;
   left: 0;
   right: 0;
+  bottom: 0;
   padding: 2em;
   overflow: hidden;
   background-color: #ECEBEB;
@@ -46,7 +47,10 @@ function App() {
       <AppHeader />
       <SearchBar handleFormSubmit={handleFormSubmit} />
       <SearchTerm>
-        {searchTerm}
+        {
+          searchTerm && `Tweets with the "${searchTerm}" hashtag:`
+        }
+        
       </SearchTerm>
       {
         searchTerm && results.length && (

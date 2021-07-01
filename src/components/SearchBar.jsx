@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import styled from 'styled-components'
+import { useState, useCallback } from 'react'
 import {
   TextField,
   InputAdornment,
@@ -8,16 +7,18 @@ import SearchIcon from '@material-ui/icons/Search';
 
 const SearchBar = ({ handleFormSubmit }) => {
   const [text, setText] = useState('')
-  const handleSubmit = e => {
+
+  const handleSubmit = useCallback(e => {
     e.preventDefault()
-    console.log('text is ', text)
+
     handleFormSubmit(text)
     setText('')
-  }
+  }, [text, handleFormSubmit])
 
-  const handleChange = e => {
+  const handleChange = useCallback(e => {
     setText(e.target.value)
-  }
+  }, [])
+
   return (
     <form onSubmit={handleSubmit}>
       <TextField
