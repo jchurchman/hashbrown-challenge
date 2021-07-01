@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader  renders as expected  1`] = `
+<div
+  className="sc-bdnxRM cXXUKy"
+>
+  <header
+    className="sc-gtsrHT fYUfFJ"
+  >
+    <h1
+      className="sc-dlnjwi jeaIPE"
+    >
+      Get your
+      <span
+        className="sc-hKFxyN jZshyA"
+      >
+        Hashbrowns
+      </span>
+      Hashtags here!
+    </h1>
+  </header>
+  <img
+    alt="hashbrown"
+    className="sc-eCApnc Hxeox"
+    src="https://media.giphy.com/media/10GUbOX16lS15C/giphy.gif"
+  />
+</div>
+`;

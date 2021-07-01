@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App  renders as expected  1`] = `
+<styled.div>
+  <AppHeader />
+  <SearchBar
+    handleFormSubmit={[Function]}
+  />
+  <styled.div>
+    
+  </styled.div>
+  
+</styled.div>
+`;
