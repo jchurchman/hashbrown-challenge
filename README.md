@@ -19,6 +19,14 @@ The problem that I am having is that all of my requests to the Twitter API from 
 
 A path to (hopefully) solve this issue that I plan to undertake is to create a Node.js server (with Express.js to handle the routes), host this React application on that server, then make fetches to the Twitter API from the server. The React application would hit the server then the server would hit Twitter.
 
+### Wait! There's more:
+
+To see the initial work of using an Express server to host this app, switch to the branch `try-a-server`. It's still not complete, but it's something, I guess.
+
+You can also find tests in the branch `some-tests`.
+
+Both of those branches have README files pertinent to their current state.
+
 # Boiler plate below
 
 
