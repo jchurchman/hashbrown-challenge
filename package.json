@@ -1,0 +1,24 @@
+{
+  "name": "hashbrown_query",
+  "version": "1.0.0",
+  "description": "tweet search and display",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jchurchman/hashbrown-challenge.git"
+  },
+  "author": "Joe Churchman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jchurchman/hashbrown-challenge/issues"
+  },
+  "homepage": "https://github.com/jchurchman/hashbrown-challenge#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}
